@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-dark bg-dark justify-content-center">
+    <span class="navbar-brand mb-0 h1" style="color: beige">PHONE DIRECTORY</span>
+  </nav>
+  <br>
+  <button type="button" class="btn btn-success" (click)="addSubscriber()" style="margin-left: 2%">ADD</button>
+  <br>
+  <br>
+  <table  style="width: 80%; border: 0; margin-left: 2%;margin-right: 10%">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sub of subsribers; let i = index">
+            <td>{{sub.name}}</td>
+            <td>{{sub.phone}}</td>
+            <td><button (click)="delete(i)" type="button" class="btn btn-danger">DELETE</button></td>
+        </tr>
+        </tbody>
+
+  </table>
+
+
